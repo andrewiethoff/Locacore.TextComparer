@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Locacore.TextComparer</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>Locacore.TextComparer</PackageId>
+    <Authors>Andre Wiethoff</Authors>
+    <PackageLicenseUrl>https://licenses.nuget.org/Apache-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/andrewiethoff/Locacore.TextComparer</PackageProjectUrl>
+    <PackageTags>Compare, Comparer, Comparing, Text, Diff, Differences, Difference, Merge, 3-way, 2-way</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Product>Text Comparer</Product>
+    <Description>The Text Comparer package allows you to compare two texts and list the differences. The result can then be visualized accordingly. The package was originally developed as a part of the Locacore application.</Description>
+    <Copyright>Copyright © 2023 by Andre Wiethoff</Copyright>
+    <Title>Locacore Text Comparer</Title>
+    <RepositoryUrl>https://github.com/andrewiethoff/Locacore.TextComparer.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial public release</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
