@@ -37,7 +37,6 @@ You can try it [here](https://www.locacore.com).
   TextComparer textComparerObject = new TextComparer();
 
   textComparerObject.TextComparerConfiguration.MinimumSizeForRangesOfDifferentText = 3;
-  textComparerObject.TextComparerConfiguration.ExpandRangesOfDifferentTextToWordBoundaries = true;
     
   ITextComparer textComparer = textComparerObject;
   List<ComparisonResult> comparisonResults = textComparer.CompareTexts(
@@ -149,7 +148,6 @@ The result of the comparison serialised as JSON:
   LineBasedTextComparer lineBasedTextComparerObject = new LineBasedTextComparer();
 
   lineBasedTextComparerObject.TextComparerConfiguration.MinimumSizeForRangesOfDifferentText = 3;
-  lineBasedTextComparerObject.TextComparerConfiguration.ExpandRangesOfDifferentTextToWordBoundaries = true;
 
   ILineBasedTextComparer lineBasedTextComparer = lineBasedTextComparerObject;
   List<LineBasedComparisonResult> lineBasedComparisonResult = lineBasedTextComparer.CompareTextsLineBased(
@@ -413,12 +411,11 @@ new or *Equals* if both texts match.
 
 ### Comparer configuration
 
-The two comparators can be configured via two parameters.
+The two comparators can be configured in one parameter.
 
 Setting | Default Value | Description
 ------- | ------------- | -----------
 MinimumSizeForRangesOfDifferentText | 3 | Sometimes there are several differences nearby. E.g., if the two texts "Lorem *ipsum* dolor" and "Lorem *insom* dolor" are compared, the result could be that either *p* and *u* are marked as different (different to *n* and *o*), or (as both are within the minimum size) *psu* will be detected as different (different to *nso*). Two nearby segments of different texts will be merged when within the minimum size.
-ExpandRangesOfDifferentTextToWordBoundaries | true | Setting this flag will expand found differences to match word boundaries. For example, if the two texts "Lorem *ipsum* dolor" and "Lorem *ipsem* dolor" are compared, the result will be either that *ipsem* is marked as different (true) or *e* (false)
 
 ### Performance
 
